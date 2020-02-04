@@ -10,8 +10,7 @@ namespace FootballGoals
             var homeGoals = new int[12];
             var awayGoals = new int[12];
 
-            Console.Write("Skriv først inn rekken du" +
-                          " har tippet, for eksempel HUBHUBHUBHUB: ");
+            Console.Write("Skriv inn rekken du har tippet, for eksempel HUBHUBHUBHUB: ");
             var usersCombination = Console.ReadLine()?.ToUpper();
 
             if (usersCombination == null
