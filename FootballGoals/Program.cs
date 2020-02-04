@@ -10,17 +10,17 @@ namespace FootballGoals
             var homeGoals = new int[12];
             var awayGoals = new int[12];
 
-                Console.Write("Skriv først inn rekken du" +
-                              " har tippet, for eksempel HUBHUBHUBHUB: ");
-                var usersPlayedCombination = Console.ReadLine()?.ToUpper();
+            Console.Write("Skriv først inn rekken du" +
+                          " har tippet, for eksempel HUBHUBHUBHUB: ");
+            var usersPlayedCombination = Console.ReadLine()?.ToUpper();
 
-                if (usersPlayedCombination == null
-                    || usersPlayedCombination.Length != 12
-                    || usersPlayedCombination.Any(c => !"HUB".Contains(c)))
-                {
-                    Console.WriteLine("Ugyldig rekke. Bruker HUBHHHUUUBBB");
-                    usersPlayedCombination = "HUBHHHUUUBBB";
-                }
+            if (usersPlayedCombination == null
+                || usersPlayedCombination.Length != 12
+                || usersPlayedCombination.Any(c => !"HUB".Contains(c)))
+            {
+                Console.WriteLine("Ugyldig rekke. Bruker HUBHHHUUUBBB");
+                usersPlayedCombination = "HUBHHHUUUBBB";
+            }
 
             while (true)
             {
