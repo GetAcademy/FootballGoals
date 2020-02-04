@@ -12,14 +12,14 @@ namespace FootballGoals
 
             Console.Write("Skriv først inn rekken du" +
                           " har tippet, for eksempel HUBHUBHUBHUB: ");
-            var usersPlayedCombination = Console.ReadLine()?.ToUpper();
+            var usersCombination = Console.ReadLine()?.ToUpper();
 
-            if (usersPlayedCombination == null
-                || usersPlayedCombination.Length != 12
-                || usersPlayedCombination.Any(c => !"HUB".Contains(c)))
+            if (usersCombination == null
+                || usersCombination.Length != 12
+                || usersCombination.Any(c => !"HUB".Contains(c)))
             {
-                Console.WriteLine("Ugyldig rekke. Bruker HUBHHHUUUBBB");
-                usersPlayedCombination = "HUBHHHUUUBBB";
+                usersCombination = "HUBHHHUUUBBB";
+                Console.WriteLine($"Ugyldig rekke. Bruker {usersCombination}");
             }
 
             while (true)
@@ -42,7 +42,7 @@ namespace FootballGoals
                     var goalsH = homeGoals[i];
                     var goalsA = awayGoals[i];
                     var currentResult = goalsH == goalsA ? 'U' : goalsH > goalsA ? 'H' : 'B';
-                    var usersGuess = usersPlayedCombination[i];
+                    var usersGuess = usersCombination[i];
                     var isCorrect = usersGuess == currentResult;
                     var isCorrectText = isCorrect ? "Riktig" : $"Feil (Du tippet {usersGuess})";
                     Console.WriteLine($"Kamp {(i + 1):D2} {goalsH}-{goalsA} {currentResult} {isCorrectText}");
