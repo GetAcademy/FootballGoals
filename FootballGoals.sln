@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballGoals", "FootballGoals\FootballGoals.csproj", "{D72BFFB6-C68A-4535-BAE6-053FA9E63CEC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballGoals.UI", "FootballGoals\FootballGoals.UI.csproj", "{D72BFFB6-C68A-4535-BAE6-053FA9E63CEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FootballGoals.UnitTest", "FootballGoals.UnitTest\FootballGoals.UnitTest.csproj", "{B7C2C813-1DC0-47DD-882A-7E9279968C67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D72BFFB6-C68A-4535-BAE6-053FA9E63CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D72BFFB6-C68A-4535-BAE6-053FA9E63CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D72BFFB6-C68A-4535-BAE6-053FA9E63CEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7C2C813-1DC0-47DD-882A-7E9279968C67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7C2C813-1DC0-47DD-882A-7E9279968C67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7C2C813-1DC0-47DD-882A-7E9279968C67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7C2C813-1DC0-47DD-882A-7E9279968C67}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

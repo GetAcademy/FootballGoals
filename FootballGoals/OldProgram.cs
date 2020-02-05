@@ -1,11 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace FootballGoals
 {
-    class Program
+    class OldProgram
     {
-        static void Main(string[] args)
+        static void OldMain()
         {
             var homeGoals = new int[12];
             var awayGoals = new int[12];
@@ -24,13 +26,13 @@ namespace FootballGoals
             while (true)
             {
                 Console.Write("Skriv inn H eller B og kampnr., for eksempel \"H10\":");
-                var answer = Console.ReadLine()?.ToUpper();
+                var input = Console.ReadLine()?.ToUpper();
                 Console.Clear();
-                Console.WriteLine($"Du skrev: {answer}");
-                if (answer.Length < 2) continue;
-                var homeOrAwayGoal = answer[0];
+                Console.WriteLine($"Du skrev: {input}");
+                if (input.Length < 2) continue;
+                var homeOrAwayGoal = input[0];
                 if (!"HB".Contains(homeOrAwayGoal)) continue;
-                var matchNoStr = answer.Substring(1);
+                var matchNoStr = input.Substring(1);
                 if (!int.TryParse(matchNoStr, out int matchNo)) continue;
                 if (matchNo < 1 || matchNo > 12) continue;
                 var goalsArray = homeOrAwayGoal == 'H' ? homeGoals : awayGoals;
@@ -47,8 +49,10 @@ namespace FootballGoals
                     Console.WriteLine($"Kamp {(i + 1):D2} {goalsH}-{goalsA} {currentResult} {isCorrectText}");
                     if (isCorrect) correctCount++;
                 }
+
                 Console.WriteLine($"Du har {correctCount} rette.");
             }
         }
+
     }
 }
