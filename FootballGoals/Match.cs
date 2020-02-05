@@ -31,11 +31,11 @@ namespace FootballGoals
                    + $"{CurrentResult} {isCorrectText}";
         }
 
-        public bool AddGoal(char teamInput)
+        public bool AddGoal(char team)
         {
-            var team = char.ToUpper(teamInput);
-            if(!"HB".Contains(team))return false;
-            if (team == 'H') _homeGoals++;
+            var teamUpper = char.ToUpper(team);
+            if(!"HB".Contains(teamUpper))return false;
+            if (teamUpper == 'H') _homeGoals++;
             else _awayGoals++;
             return true;
         }

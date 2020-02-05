@@ -2,7 +2,7 @@ using NUnit.Framework;
 
 namespace FootballGoals.UnitTest
 {
-    public class MatchTests
+    public class MatchTest
     {
         [Test]
         public void TestMatchNoGoals()
